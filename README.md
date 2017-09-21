@@ -21,4 +21,8 @@ The form validates a correct email address on user input and displays a correspo
   - Alert the user to any validation errors in the email and password fields.
   - Prompt the user to fix any errors before submitting.
 
+## Resources
+* Stackoverflow post that helped with validating email - https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript
+* Blog post that helped with thinking about how to validate multiple fields - https://learnetto.com/blog/how-to-do-simple-form-validation-in-reactjs
+
 

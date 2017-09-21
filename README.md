@@ -8,17 +8,17 @@ The form validates a correct email address on user input and displays a correspo
 
 ## Next steps
 
-1) Build out the test suite.
+### Build out the test suite.
   - Debug the shallow test in `SimpleForm.test.js`.
   - Use mount for more advanced testing.
   - Write a test that checks whether the component correctly validates an email address.
+  
+### Password validation!
+  - Make sure a user's password and password confirmation match.
+  - This would add to the validateFields() method.
 
-2) Password validation!
-  - Make sure a user's password and password confirmation match
-  - This would add to the validateFields() method
-
-3) Build out the onSubmit function
+### Build out the onSubmit function
   - Alert the user to any validation errors in the email and password fields.
-  - Prompt the user to fix any errors before submitting
+  - Prompt the user to fix any errors before submitting.
 
 

@@ -3,3 +3,40 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.block      { display: block; }
+.w-full     { width: 100%; }
+.mr-4       { margin-right: 4px; }
+.mb-4       { margin-bottom: 4px; }
+.mb-8       { margin-bottom: 8px; }
+.icon-red   { color: #d44950; }
+.icon-green { color: #1d9d74; }
+
+.form-container {
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+}
+
+.btn {
+  padding: 8px 48px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-blue {
+  background-color: #0474b3;
+  border: 1px solid #0474b3;
+  color: #fff;
+}
+
+.input-md {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  border-style: solid;
+}

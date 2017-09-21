@@ -46,13 +46,14 @@ class SimpleForm extends Component {
     const { isEmailValid } = this.state;
 
     return(
-      <form>
+      <form className="form-container">
         <label>
           Email:
           <div className="block mb-4">
-            {isEmailValid ? <Icon styles="fa fa-check-circle fa-lg" text="Hooray, valid email!" /> : <Icon styles="fa fa-times-circle fa-lg" text="Please input a valid email." />}
+            {isEmailValid ? <Icon styles="fa fa-check-circle fa-lg icon-green" text="Hooray, valid email!" /> : <Icon styles="fa fa-times-circle fa-lg icon-red" text="Please input a valid email." />}
           </div>
           <input
+            className="w-full mb-8 input-md"
             name="userEmail"
             type="text"
             value={ this.state.userEmail }
@@ -62,6 +63,7 @@ class SimpleForm extends Component {
         <label>
           Password:
           <input
+            className="w-full mb-8 input-md"
             name="userPassword"
             type="password"
             value={ this.state.userPassword }
@@ -71,12 +73,14 @@ class SimpleForm extends Component {
         <label>
           Confirm Password:
           <input
+            className="w-full mb-8 input-md"
             name="userPasswordConfirmation"
             type="password"
             value={ this.state.userPasswordConfirmation }
             onChange={ this.handleChange }
           />
         </label>
+        <input className="btn btn-blue" type="submit" value="Submit" />
       </form>
     );
   }

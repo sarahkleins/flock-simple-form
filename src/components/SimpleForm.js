@@ -7,11 +7,27 @@ class SimpleForm extends Component {
     this.state = {
       userEmail: '',
       userPassword: '',
-      userPasswordConfirmation: ''
+      userPasswordConfirmation: '',
+      isEmailValid: false,
+      isPasswordValid: false
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.validateFields = this.validateFields.bind(this);
+  }
+
+  validateFields(inputName, value){
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    switch(inputName){
+      case 'userEmail':
+        re.test(value) ? this.setState({ isEmailValid: true }) : this.setState({ isEmailValid: false });
+        break;
+      case 'userPassword':
+        /* validate password here*/
+        break;
+      default:
+        break;
+    }
   }
 
   handleChange(event){
@@ -20,11 +36,9 @@ class SimpleForm extends Component {
 
     this.setState({
       [inputName]: value
+    }, () => {
+      this.validateFields(inputName, value);
     });
-  }
-
-  validateFields(inputName, value){
-
   }
 
   render(){

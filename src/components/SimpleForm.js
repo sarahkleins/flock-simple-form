@@ -9,6 +9,17 @@ class SimpleForm extends Component {
       userPassword: '',
       userPasswordConfirmation: ''
     }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event){
+    let value = event.target.value;
+    let inputName = event.target.name;
+
+    this.setState({
+      [inputName]: value
+    });
   }
 
   render(){
@@ -19,6 +30,8 @@ class SimpleForm extends Component {
           <input
             name="userEmail"
             type="text"
+            value={ this.state.userEmail }
+            onChange={ this.handleChange }
           />
         </label>
         <label>
@@ -26,6 +39,8 @@ class SimpleForm extends Component {
           <input
             name="userPassword"
             type="password"
+            value={ this.state.userPassword }
+            onChange={ this.handleChange }
           />
         </label>
         <label>
@@ -33,6 +48,8 @@ class SimpleForm extends Component {
           <input
             name="userPasswordConfirmation"
             type="password"
+            value={ this.state.userPasswordConfirmation }
+            onChange={ this.handleChange }
           />
         </label>
       </form>

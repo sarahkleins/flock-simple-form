@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Icon(props){
   return(
     <div>
-      <span>{props.text}</span>
+      <span className="mr-4">{props.text}</span>
       <i className={props.styles} aria-hidden="true"></i>
     </div>
   );

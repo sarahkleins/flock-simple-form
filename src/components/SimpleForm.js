@@ -14,6 +14,7 @@ class SimpleForm extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.validateFields = this.validateFields.bind(this);
   }
 
@@ -42,11 +43,16 @@ class SimpleForm extends Component {
     });
   }
 
+  handleSubmit(event){
+    /* scaffold for handleSubmit */
+    /* return error if email is invalid or passwords do not match*/
+  }
+
   render(){
     const { isEmailValid } = this.state;
 
     return(
-      <form className="form-container">
+      <form className="form-container" onSubmit={ this.handleSubmit }>
         <label>
           Email:
           <div className="block mb-4">

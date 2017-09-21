@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Icon from './Icon.js';
 
 class SimpleForm extends Component {
   constructor(){
@@ -42,10 +43,15 @@ class SimpleForm extends Component {
   }
 
   render(){
+    const { isEmailValid } = this.state;
+
     return(
       <form>
         <label>
           Email:
+          <div className="block mb-4">
+            {isEmailValid ? <Icon styles="fa fa-check-circle fa-lg" text="Hooray, valid email!" /> : <Icon styles="fa fa-times-circle fa-lg" text="Please input a valid email." />}
+          </div>
           <input
             name="userEmail"
             type="text"

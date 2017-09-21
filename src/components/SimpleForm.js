@@ -11,6 +11,7 @@ class SimpleForm extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
+    this.validateFields = this.validateFields.bind(this);
   }
 
   handleChange(event){
@@ -20,6 +21,10 @@ class SimpleForm extends Component {
     this.setState({
       [inputName]: value
     });
+  }
+
+  validateFields(inputName, value){
+
   }
 
   render(){
